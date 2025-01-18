@@ -1,1 +1,106 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio Code workspace history
+.vscode/*
+
+# Rider project files
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Visual Studio 2019
 .vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.vcxproj.filters.state
+
+# Visual Studio for Mac
+.idea/
+.idea.*
+
+# Visual Studio Code
+*.code-workspace
+.vscode/
+
+# DotNetCore project specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+fastlane/
+*.pidb
+*.booproj
+*.tmp
+*.ide.*
+*.csproj.user
+
+# Resharper and Rider
+_ReSharper.Caches/
+.idea/
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux specific
+.Trash-*
+
+# Logs and temporary files
+*.log
+*.tlog
+*.tmp
+
+# Docker
+*.container_metadata.json
+
+# Node.js dependencies
+node_modules/
+
+# Packages
+*.nupkg
+*.snupkg
+
+# Logs
+*.log
+
+# JetBrains Rider IDE
+.idea/
+
+# Coverage Reports
+coverage/
+*.coverage
+*.coveragexml
+*.log
+*.opencover.xml
+
+# NCrunch
+.ncrunchsolution
+*.ncrunchproject
+*.ncrunchprojectstate
