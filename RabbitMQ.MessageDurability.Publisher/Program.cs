@@ -4,11 +4,8 @@ using System.Text;
 
 Console.WriteLine("Publisher !");
 
-// 1- RabbitMQ'ya bağlantı oluştur
 ConnectionFactory factory = new ConnectionFactory();
 factory.Uri = new Uri("amqps://hwwpdpny:btExE1dKV3tfRUrgIy1BAWxyJ4zcksCT@shark.rmq.cloudamqp.com/hwwpdpny");
-
-// 2- Bağlantıyı aktifleştir ve channel aç
 await using IConnection connection = await factory.CreateConnectionAsync();
 IChannel channel = await connection.CreateChannelAsync();
 
@@ -18,9 +15,6 @@ IChannel channel = await connection.CreateChannelAsync();
 // eğer bir queue'nun publisher'da durable parametresi true verilmiş ise consumer'dada true olmalıdır.
 await channel.QueueDeclareAsync(queue: "example-queue", exclusive: false, durable: true);
 
-// 4- Queue'ya mesaj gönder
-// RabbitMQ kuyruğa atılan mesajları byte türünden kabul eder. Haliyle göndericeğimiz mesajı byte türüne
-// dönüştürmemiz gerekli.
 byte[] message = Encoding.UTF8.GetBytes("Merhaba");
 await channel.BasicPublishAsync(exchange: "", routingKey: "example-queue", body: message);
 
