@@ -18,16 +18,25 @@ IChannel channel = await connection.CreateChannelAsync();
 await channel.QueueDeclareAsync(queue: "example-queue", exclusive: false);
 
 // 4- Queue'dan mesaj oku
+// autoAck -> false olmalı, mesajın işlendiğini onaylamak için. Message Acknowledge özelliği.
 AsyncEventingBasicConsumer consumer = new(channel);
-await channel.BasicConsumeAsync(queue: "example-queue", false, consumer: consumer);
+await channel.BasicConsumeAsync(queue: "example-queue", autoAck: false, consumer: consumer);
 
+// 5- Mesajı işle
 consumer.ReceivedAsync += async (sender, e) =>
 {
     //var body = e.Body.Span; Bu stack üzerindeki veri bundan dolayı asenkron işlemden önce kullanılamaz.
     var body = e.Body.ToArray();
-    await Task.Delay(100);
-
+    await Task.Delay(1000);
     Console.WriteLine(Encoding.UTF8.GetString(body));
+
+    // Mesaj işlendiğinde, mesajın RabbitMQ'ya silinmesi gerektiğini bildir.
+    // multiple parametresi -> false olur ise sadece bu mesajın işlendiğini bildirir.
+    // multiple parametresi -> true olur ise bu mesajdan önceki tüm mesajların işlendiğini bildirir.
+    await channel.BasicAckAsync(e.DeliveryTag, multiple: false);
 };
+
+// Eğer mesajın işlenemediği taktirde tekrar kuyruğa eklenmesini istersek requeue parametresini true yapmalıyız.
+// await channel.BasicAckAsync(e.DeliveryTag, multiple: false, requeue: true);
 
 Console.Read();

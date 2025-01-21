@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35521.163 d17.12
+VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basics", "Basics", "{1009A3D3-01A5-4E18-9882-BF12E7254DA1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Basics", "1-Basics", "{1009A3D3-01A5-4E18-9882-BF12E7254DA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Publisher", "RabbitMQ.Publisher\RabbitMQ.Publisher.csproj", "{D7E34B77-AB3B-4AFD-80AA-4449F17452C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Consumer", "RabbitMQ.Consumer\RabbitMQ.Consumer.csproj", "{E5A106E6-7AE9-41E5-B745-8345436109B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2- Message Ack", "2- Message Ack", "{51A5A45C-201F-42D8-8464-482C7DA99C6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.MessageAck.Consumer", "RabbitMQ.MessageAck.Consumer\RabbitMQ.MessageAck.Consumer.csproj", "{C5C15788-6D9A-495E-9872-36DA8AD1290D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,10 @@ Global
 		{E5A106E6-7AE9-41E5-B745-8345436109B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5A106E6-7AE9-41E5-B745-8345436109B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5A106E6-7AE9-41E5-B745-8345436109B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5C15788-6D9A-495E-9872-36DA8AD1290D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C15788-6D9A-495E-9872-36DA8AD1290D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C15788-6D9A-495E-9872-36DA8AD1290D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C15788-6D9A-495E-9872-36DA8AD1290D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D7E34B77-AB3B-4AFD-80AA-4449F17452C4} = {1009A3D3-01A5-4E18-9882-BF12E7254DA1}
 		{E5A106E6-7AE9-41E5-B745-8345436109B0} = {1009A3D3-01A5-4E18-9882-BF12E7254DA1}
+		{C5C15788-6D9A-495E-9872-36DA8AD1290D} = {51A5A45C-201F-42D8-8464-482C7DA99C6C}
 	EndGlobalSection
 EndGlobal
