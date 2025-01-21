@@ -9,9 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Publisher", "Rabbi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Consumer", "RabbitMQ.Consumer\RabbitMQ.Consumer.csproj", "{E5A106E6-7AE9-41E5-B745-8345436109B0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2- Message Ack", "2- Message Ack", "{51A5A45C-201F-42D8-8464-482C7DA99C6C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2- Message Acknowledgement", "2- Message Acknowledgement", "{51A5A45C-201F-42D8-8464-482C7DA99C6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.MessageAck.Consumer", "RabbitMQ.MessageAck.Consumer\RabbitMQ.MessageAck.Consumer.csproj", "{C5C15788-6D9A-495E-9872-36DA8AD1290D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Message Durability", "3- Message Durability", "{BA77AAC3-20D4-44D8-9C6F-231DF1272C29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.MessageDurability.Publisher", "RabbitMQ.MessageDurability.Publisher\RabbitMQ.MessageDurability.Publisher.csproj", "{2D3E3986-2EC0-4563-A5AA-ED001741F26B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{C5C15788-6D9A-495E-9872-36DA8AD1290D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C15788-6D9A-495E-9872-36DA8AD1290D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5C15788-6D9A-495E-9872-36DA8AD1290D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D3E3986-2EC0-4563-A5AA-ED001741F26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3E3986-2EC0-4563-A5AA-ED001741F26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3E3986-2EC0-4563-A5AA-ED001741F26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3E3986-2EC0-4563-A5AA-ED001741F26B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +47,6 @@ Global
 		{D7E34B77-AB3B-4AFD-80AA-4449F17452C4} = {1009A3D3-01A5-4E18-9882-BF12E7254DA1}
 		{E5A106E6-7AE9-41E5-B745-8345436109B0} = {1009A3D3-01A5-4E18-9882-BF12E7254DA1}
 		{C5C15788-6D9A-495E-9872-36DA8AD1290D} = {51A5A45C-201F-42D8-8464-482C7DA99C6C}
+		{2D3E3986-2EC0-4563-A5AA-ED001741F26B} = {BA77AAC3-20D4-44D8-9C6F-231DF1272C29}
 	EndGlobalSection
 EndGlobal
