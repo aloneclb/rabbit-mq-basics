@@ -21,6 +21,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4- Fair Dispatch", "4- Fair
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.FairDispatch.Publisher", "RabbitMQ.FairDispatch.Publisher\RabbitMQ.FairDispatch.Publisher.csproj", "{0166056A-04F0-49AE-A2FD-F6D9CADBA7C6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5- Direct Exchange", "5- Direct Exchange", "{7E624FBA-8D82-41F2-AD12-190F6A3BCE0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.DirectExchange.Consumer", "RabbitMQ.DirectExchange.Consumer\RabbitMQ.DirectExchange.Consumer.csproj", "{D0A841F2-8C0E-470C-9271-C68ACE0B9EF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.DirectExchange.Publisher", "RabbitMQ.DirectExchange.Publisher\RabbitMQ.DirectExchange.Publisher.csproj", "{C56006B1-3011-4D00-8A28-BB1D3E993585}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +53,14 @@ Global
 		{0166056A-04F0-49AE-A2FD-F6D9CADBA7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0166056A-04F0-49AE-A2FD-F6D9CADBA7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0166056A-04F0-49AE-A2FD-F6D9CADBA7C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A841F2-8C0E-470C-9271-C68ACE0B9EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A841F2-8C0E-470C-9271-C68ACE0B9EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A841F2-8C0E-470C-9271-C68ACE0B9EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A841F2-8C0E-470C-9271-C68ACE0B9EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C56006B1-3011-4D00-8A28-BB1D3E993585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C56006B1-3011-4D00-8A28-BB1D3E993585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C56006B1-3011-4D00-8A28-BB1D3E993585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C56006B1-3011-4D00-8A28-BB1D3E993585}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +71,7 @@ Global
 		{C5C15788-6D9A-495E-9872-36DA8AD1290D} = {51A5A45C-201F-42D8-8464-482C7DA99C6C}
 		{2D3E3986-2EC0-4563-A5AA-ED001741F26B} = {BA77AAC3-20D4-44D8-9C6F-231DF1272C29}
 		{0166056A-04F0-49AE-A2FD-F6D9CADBA7C6} = {8DD6D639-5494-43E9-B243-FACF3C8CDFE7}
+		{D0A841F2-8C0E-470C-9271-C68ACE0B9EF1} = {7E624FBA-8D82-41F2-AD12-190F6A3BCE0E}
+		{C56006B1-3011-4D00-8A28-BB1D3E993585} = {7E624FBA-8D82-41F2-AD12-190F6A3BCE0E}
 	EndGlobalSection
 EndGlobal
