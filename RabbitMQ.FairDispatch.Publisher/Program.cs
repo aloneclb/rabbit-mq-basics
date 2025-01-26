@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
 using System.Text;
 
 Console.WriteLine("Publisher !");
