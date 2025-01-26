@@ -10,24 +10,21 @@ factory.Uri = new Uri("amqps://hwwpdpny:btExE1dKV3tfRUrgIy1BAWxyJ4zcksCT@shark.r
 await using IConnection connection = await factory.CreateConnectionAsync();
 IChannel channel = await connection.CreateChannelAsync();
 
-// Fanout Exchange Oluştur
-await channel.ExchangeDeclareAsync(exchange: "fanout-exchange-example", type: ExchangeType.Fanout);
+// Topic Exchange Oluştur
+await channel.ExchangeDeclareAsync(exchange: "topic-exchange-example", type: ExchangeType.Topic);
 
-Console.WriteLine("Fanout Exchange adını giriniz: ");
-var queueName = Console.ReadLine();
+Console.WriteLine("Dinlenicek Topic Exchange'i belirtiniz: ");
+var topicName = Console.ReadLine();
 
-var queue = await channel.QueueDeclareAsync(queue: queueName ?? string.Empty, exclusive: false);
+var queue = await channel.QueueDeclareAsync();
+await channel.QueueBindAsync(queue: queue.QueueName, exchange: "topic-exchange-example", routingKey: topicName!);
 
-await channel.QueueBindAsync(queue: queue.QueueName, exchange: "fanout-exchange-example", routingKey: string.Empty);
-
-// consumer oluştur
-AsyncEventingBasicConsumer consumer = new(channel);
+AsyncEventingBasicConsumer consumer = new AsyncEventingBasicConsumer(channel);
 await channel.BasicConsumeAsync(queue: queue.QueueName, autoAck: true, consumer: consumer);
 
 consumer.ReceivedAsync += async (sender, e) =>
 {
     var body = e.Body.ToArray();
-    await Task.Delay(100);
     Console.WriteLine(Encoding.UTF8.GetString(body));
 };
 

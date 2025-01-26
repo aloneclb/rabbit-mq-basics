@@ -33,6 +33,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.FanoutExchange.Pub
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.FanoutExchange.Consumer", "RabbitMQ.FanoutExchange.Consumer\RabbitMQ.FanoutExchange.Consumer.csproj", "{5AB46335-7F3E-4077-A40D-AED25B7C9745}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7- Topic Exchange", "7- Topic Exchange", "{D42057A1-D634-4CEC-A870-B32970325C4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.TopicExchange.Consumer", "RabbitMQ.TopicExchange.Consumer\RabbitMQ.TopicExchange.Consumer.csproj", "{5D0FDC9F-A209-498E-A1C4-9DC00C052A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.TopicExchange.Publisher", "RabbitMQ.TopicExchange.Publisher\RabbitMQ.TopicExchange.Publisher.csproj", "{7C3C64C0-2B17-4802-AABB-364DFC551684}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +81,14 @@ Global
 		{5AB46335-7F3E-4077-A40D-AED25B7C9745}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AB46335-7F3E-4077-A40D-AED25B7C9745}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AB46335-7F3E-4077-A40D-AED25B7C9745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D0FDC9F-A209-498E-A1C4-9DC00C052A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0FDC9F-A209-498E-A1C4-9DC00C052A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0FDC9F-A209-498E-A1C4-9DC00C052A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0FDC9F-A209-498E-A1C4-9DC00C052A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3C64C0-2B17-4802-AABB-364DFC551684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3C64C0-2B17-4802-AABB-364DFC551684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3C64C0-2B17-4802-AABB-364DFC551684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3C64C0-2B17-4802-AABB-364DFC551684}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,5 +103,7 @@ Global
 		{C56006B1-3011-4D00-8A28-BB1D3E993585} = {7E624FBA-8D82-41F2-AD12-190F6A3BCE0E}
 		{11B764AB-5BF1-409D-A1DE-D7ABBFCCC7C6} = {80BC8A57-3F27-4BC8-A492-282051E19935}
 		{5AB46335-7F3E-4077-A40D-AED25B7C9745} = {80BC8A57-3F27-4BC8-A492-282051E19935}
+		{5D0FDC9F-A209-498E-A1C4-9DC00C052A17} = {D42057A1-D634-4CEC-A870-B32970325C4A}
+		{7C3C64C0-2B17-4802-AABB-364DFC551684} = {D42057A1-D634-4CEC-A870-B32970325C4A}
 	EndGlobalSection
 EndGlobal
