@@ -10,14 +10,24 @@ factory.Uri = new Uri("amqps://hwwpdpny:btExE1dKV3tfRUrgIy1BAWxyJ4zcksCT@shark.r
 await using IConnection connection = await factory.CreateConnectionAsync();
 IChannel channel = await connection.CreateChannelAsync();
 
-// Topic Exchange Oluştur
-await channel.ExchangeDeclareAsync(exchange: "topic-exchange-example", type: ExchangeType.Topic);
+// Header Exchange Oluştur
+await channel.ExchangeDeclareAsync(exchange: "header-exchange-example", type: ExchangeType.Headers);
 
-Console.WriteLine("Dinlenicek Topic Exchange'i belirtiniz: ");
-var topicName = Console.ReadLine();
+Console.WriteLine("Lütfen header value girin: ");
+string? value = Console.ReadLine();
+
+ArgumentNullException.ThrowIfNull(value);
 
 var queue = await channel.QueueDeclareAsync();
-await channel.QueueBindAsync(queue: queue.QueueName, exchange: "topic-exchange-example", routingKey: topicName!);
+
+await channel.QueueBindAsync(
+    queue: queue.QueueName,
+    exchange: "header-exchange-example",
+    string.Empty,
+    new Dictionary<string, object?>
+    {
+        { "no", value }
+    });
 
 AsyncEventingBasicConsumer consumer = new AsyncEventingBasicConsumer(channel);
 await channel.BasicConsumeAsync(queue: queue.QueueName, autoAck: true, consumer: consumer);
