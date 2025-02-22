@@ -26,6 +26,7 @@ await channel.QueueBindAsync(
     string.Empty,
     new Dictionary<string, object?>
     {
+        { "x-match", "all" }, // default any 
         { "no", value }
     });
 
